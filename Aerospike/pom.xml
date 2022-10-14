@@ -86,7 +86,20 @@
       <version>5.6.10.Final</version>
     </dependency>
 
-    <dependency><groupId>io.micronaut.security</groupId><artifactId>micronaut-security</artifactId><version>3.7.1</version></dependency>
+<!--    <dependency><groupId>io.micronaut.security</groupId><artifactId>micronaut-security</artifactId><version>3.7.1</version></dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>io.micronaut</groupId>-->
+<!--      <artifactId>micronaut-security-jwt</artifactId>-->
+<!--      <version>1.4.0</version>-->
+<!--    </dependency>-->
+    <dependency>
+      <groupId>io.micronaut.security</groupId>
+      <artifactId>micronaut-security-session</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.security</groupId>
+      <artifactId>micronaut-security-jwt</artifactId>
+    </dependency>
 
   </dependencies>
 

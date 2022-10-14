@@ -9,12 +9,7 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 
-@SecurityScheme(
 
-        name = "basicAuth", // can be set to anything
-        type = SecuritySchemeType.HTTP,
-        scheme = "basic"
-)
 @OpenAPIDefinition(
         info = @Info(
                 title = "aerospike",

@@ -13,7 +13,8 @@ import jakarta.inject.Inject;
 import java.util.List;
 
 @Controller("/Person")
-//@Tag(name = "Person Details")
+
+@Tag(name = "Person Details")
 @Secured(SecurityRule.IS_AUTHENTICATED)
 
 public class PersonController {
