@@ -44,4 +44,8 @@ netty:
 kafka:
   bootstrap:
     servers: localhost:9092
+  producers:
+    product-client:
+      value:
+        serializer: org.apache.kafka.common.serialization.ByteArraySerializer
 

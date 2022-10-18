@@ -1,6 +1,7 @@
 package com.restapi.Service;
 
 import com.restapi.Model.Person;
+import io.micronaut.data.model.Page;
 import jakarta.inject.Singleton;
 
 import java.util.List;
@@ -13,7 +14,10 @@ public interface PersonService {
 
   public String updatePerson(Person person , int id);
   public String deleteById(int id);
-
+//
+//    Page<Person> findEmployeesWithPagination(int pagenumber, int pageSize);
+//
+//    Page<Person> findEmployeesWithPaginationAndSorting(int offset, int pageSize, String field);
 }
 
 

@@ -1,8 +1,7 @@
 package com.restapi.Model;
 
 import com.aerospike.mapper.annotations.*;
-
-
+import io.micronaut.http.HttpResponse;
 
 
 @AerospikeRecord(namespace= "test",set="Person")
@@ -39,12 +38,14 @@ public class Person {
     public Person(String name, String email, int sal, String joiningDate, Categories categories) {
     }
 
-    public int getId() {
-        return id;
-    }
+
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {

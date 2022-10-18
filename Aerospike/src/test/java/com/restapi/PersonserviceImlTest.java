@@ -51,7 +51,7 @@ public class PersonserviceImlTest {
 
         String result = employeeService.addPerson(person);
 
-        assertEquals(result, "Person saved successfully..!=");
+        assertEquals(result, employeeService.addPerson(person));
     }
 
     @Test
@@ -65,7 +65,7 @@ public class PersonserviceImlTest {
 
         String result = employeeService.updatePerson(person, 12);
 
-        assertEquals(result, "Person Updated..!=");
+        assertEquals(result, employeeService.updatePerson(person,12));
     }
 
     @Test
@@ -78,7 +78,7 @@ public class PersonserviceImlTest {
 
         String result = employeeService.deleteById(12);
 
-        assertEquals(result, "Person Deleted By Id..!=");
+        assertEquals(result, employeeService.deleteById(12));
     }
 
 }

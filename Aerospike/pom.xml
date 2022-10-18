@@ -100,6 +100,16 @@
       <groupId>io.micronaut.security</groupId>
       <artifactId>micronaut-security-jwt</artifactId>
     </dependency>
+<!--    <dependency>-->
+<!--      <groupId>io.micronaut.data</groupId>-->
+<!--      <artifactId>micronaut-data-runtime</artifactId>-->
+<!--      <version>1.0.0.M1</version>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>io.swagger</groupId>-->
+<!--      <artifactId>swagger-annotations</artifactId>-->
+<!--      <version>1.5.10</version>-->
+<!--    </dependency>-->
 
   </dependencies>
 

@@ -15,12 +15,16 @@ import org.apache.kafka.common.serialization.StringSerializer;
 import java.util.List;
 import java.util.Properties;
 
+import static org.apache.kafka.common.resource.ResourceType.TOPIC;
+
 public class PersonRepositoryIml implements PersonRepository {
     @Inject
     aeroMapperConfig mapper;
 
     @Inject
     EmailService emailService;
+
+
 
     static final Object BOOTSTRAP_SERVERS = "localhost:9092";
     static final String TOPIC = "person";
@@ -40,6 +44,7 @@ public class PersonRepositoryIml implements PersonRepository {
         ProducerRecord<Integer, String> record = new ProducerRecord<>(TOPIC,"Message-"+"Person Data Added..!="+" "+person);
         kafkaProducer.send(record);
         kafkaProducer.close();
+
         EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info added "+person.getName()+", Your Person Id is "+person.getId(), person.getEmail()));
         return "Person saved successfully..!="+person.getId();
     }
@@ -53,12 +58,12 @@ public class PersonRepositoryIml implements PersonRepository {
 
         KafkaProducer<Integer, String> kafkaProducer = new KafkaProducer(producerProperties);
 
-        ProducerRecord<Integer, String> record = new ProducerRecord<>(TOPIC,"Message-"+"Get All Person Data...!="+" "+Person.class);
+        ProducerRecord<Integer, String> record = new ProducerRecord<>(TOPIC,"Message-"+"Get All Person Data...!="+" "+mapper.getMapper().scan(Person.class));
         kafkaProducer.send(record);
         kafkaProducer.close();
        return mapper.getMapper().scan(Person.class);
 
-        //EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info updated "+Person.class.getName()+", Your Person Id is "+Person.class.getField(getAllPerson().), person.getEmail()));
+       // EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info updated "+Person.class.getName()+", Your Person Id is "+person.);
     }
 @Override
     public Person findById(int id) {
@@ -70,7 +75,7 @@ public class PersonRepositoryIml implements PersonRepository {
 
     KafkaProducer<Integer, String> kafkaProducer = new KafkaProducer(producerProperties);
 
-    ProducerRecord<Integer, String> record = new ProducerRecord<>(TOPIC,"Message-"+"Get Person Data by Id..!="+" "+id);
+    ProducerRecord<Integer, String> record = new ProducerRecord<>(TOPIC,"Message-"+"Get Person Data by Id..!="+" "+mapper.getMapper().read(Person.class,id));
     kafkaProducer.send(record);
     kafkaProducer.close();
 
@@ -115,10 +120,10 @@ public class PersonRepositoryIml implements PersonRepository {
         KafkaProducer<Integer, String> kafkaProducer = new KafkaProducer(producerProperties);
 
 
-        ProducerRecord<Integer, String> record = new ProducerRecord<>(TOPIC,"Message-"+"Person Data Deleted By Id..!="+" "+id);
+        ProducerRecord<Integer, String> record = new ProducerRecord<>(TOPIC,"Message-"+"Person Data Deleted By Id..!="+id);
         kafkaProducer.send(record);
         kafkaProducer.close();
-        //EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info added "+Person.class.getName()+"Person deleted Id"+Person.class,id));
+       // EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info Data Deleted "+Person.class.getName()+"Person deleted Id"+Person.class,deleteById(id)));
         return "Person Deleted By Id..!="+id;
 
     }
