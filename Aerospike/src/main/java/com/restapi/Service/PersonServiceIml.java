@@ -16,8 +16,7 @@ public class PersonServiceIml implements PersonService {
     PersonRepositoryIml employeeRepository;
 @Inject
 EmailService emailRepository;
-@Inject
-    SendPersonNotification sendPersonNotification;
+
     @Override
     public String addPerson(Person person) {
         return employeeRepository.addPerson(person);
@@ -28,7 +27,7 @@ EmailService emailRepository;
 
     @Override
     public Person getPersonById(int id) {
-        String Message = "dfggnmdbvjbvvcbh";
+
         return employeeRepository.findById(id);
 
     }
