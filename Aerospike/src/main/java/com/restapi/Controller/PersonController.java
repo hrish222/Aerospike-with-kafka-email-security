@@ -24,7 +24,7 @@ import static org.apache.logging.log4j.LogManager.*;
 @Controller("/Person")
 
 @Tag(name = "Person Details")
-@Secured({SecurityRule.IS_AUTHENTICATED,"Role_user"})
+@Secured({SecurityRule.IS_AUTHENTICATED})
 
 public class PersonController {
     private static Logger logger = (Logger) LogManager.getLogger(PersonController.class.getName());
