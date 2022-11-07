@@ -1,0 +1,32 @@
+11:39:37 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Model.Person - com.restapi.Controller.PersonControllerPerson added
+11:43:35 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonControllerPerson added
+11:21:41 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> addPerson(@Body Person person)
+11:26:33 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> addPerson(@Body Person person)
+11:28:54 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.AdminController .HttpResponse<CustomResponse> addPerson(@Body Person person)
+11:29:47 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.AdminController .HttpResponse<CustomResponse> deleteById(int id)
+11:32:21 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.AdminController .HttpResponse<CustomResponse> addPerson(@Body Person person)
+11:38:00 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.AdminController .HttpResponse<CustomResponse> addPerson(@Body Person person)
+12:17:42 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
+12:18:22 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization successful for path : /Person/GetallPerson
+12:18:22 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<List<Person>> getAllPerson()
+12:19:12 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
+12:19:58 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
+12:20:41 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization failed for path : /Person/add
+12:21:23 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization successful for path : /Person/GetallPerson
+12:21:23 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<List<Person>> getAllPerson()
+12:24:19 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization failed for path : /Person/add
+12:32:18 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
+12:32:49 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
+12:33:10 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
+12:33:46 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization failed for path : /Person/add
+12:34:03 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization successful for path : /Person/GetallPerson
+12:34:03 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<List<Person>> getAllPerson()
+12:34:40 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
+12:35:15 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization successful for path : /Person/add
+12:35:19 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization successful for path : /Person/add
+12:35:19 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> addPerson(@Body Person person)
+12:36:36 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization successful for path : /Person/delete/48
+12:38:10 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization successful for path : /Person/delete/48
+12:38:11 [default-nioEventLoopGroup-1-3] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> deleteById(int id)
+12:38:27 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
+12:39:05 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Casbin Authorization failed for path : /Person/delete/121
