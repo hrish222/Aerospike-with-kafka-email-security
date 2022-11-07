@@ -1,4 +1,0 @@
-12:47:03 [default-nioEventLoopGroup-1-4] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
-12:47:03 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
-12:47:03 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
-12:47:03 [default-nioEventLoopGroup-1-3] INFO  com.restapi.auth.CasbinSecurity - Fall back to Micronaut security as authentication is null
