@@ -22,7 +22,7 @@ import reactor.core.publisher.Mono;
         private final Enforcer enforcer;
         public CasbinSecurity(RolesFinder rolesFinder) {
             super(rolesFinder);
-            this.enforcer = CasbinEnforcerutil.getCasbinEnForcer();
+            this.enforcer = SecurityRuleResult.getCasbinEnForcer();
         }
 
         @Override
@@ -31,7 +31,7 @@ import reactor.core.publisher.Mono;
                 if (LOGGER.isInfoEnabled())
                     LOGGER.info("Fall back to Micronaut security as authentication is null");
                 return Mono.just(SecurityRuleResult.UNKNOWN);
-            } else if (enforcer != null && enforcer.enforce(authentication.getName(), request.getPath(), request.getMethod().name())) {
+            } else if (enforcer != null && enforcer.(authentication.getName(), request.getPath(), request.getMethod().name())) {
                 if (LOGGER.isInfoEnabled())
                     LOGGER.info("Casbin Authorization successful for path : " + request.getPath());
                 return Mono.just(SecurityRuleResult.ALLOWED);
