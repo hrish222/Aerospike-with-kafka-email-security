@@ -21,8 +21,8 @@ public class LoginAuthentication implements AuthenticationProvider {
 @Override
 public Publisher<AuthenticationResponse> authenticate(@Nullable HttpRequest<?> httpRequest,AuthenticationRequest<?, ?> authenticationRequest) {
     return Flux.create(emitter -> {
-        if (authenticationRequest.getIdentity().equals("ADMIN") &&
-                authenticationRequest.getSecret().equals("ADMIN")) {
+        if (authenticationRequest.getIdentity().equals("USER") &&
+                authenticationRequest.getSecret().equals("USER")|| authenticationRequest.getIdentity().equals("ADMIN")&& authenticationRequest.getSecret().equals("ADMIN")){
             emitter.next(AuthenticationResponse.success((String) authenticationRequest.getIdentity()));
             emitter.complete();
         } else {

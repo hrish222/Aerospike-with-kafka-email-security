@@ -1,7 +1,7 @@
 package com.restapi.Model;
 
 import com.aerospike.mapper.annotations.*;
-import io.micronaut.http.HttpResponse;
+
 
 
 @AerospikeRecord(namespace= "test",set="Person")

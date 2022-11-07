@@ -26,13 +26,16 @@ public class PersonRepositoryIml implements PersonRepository {
     EmailService emailService;
     @Inject
     SendPersonNotification sendPersonNotification;
+//    @Inject
+//    SendEmailNotification sendEmailNotification;
 
 
     @Override
     public String addPerson(Person person) {
        mapper.getMapper().save(person);
          sendPersonNotification.sendPersonNotification("Person addded..!"+person);
-        EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info added "+person.getName()+", Your Person Id is "+person.getId(), person.getEmail()));
+        // sendEmailNotification.sendEmailNotification("dfhhadfhi"+person.getEmail(),"Person alerts!!");
+       EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info added "+person.getName()+", Your Person Id is "+person.getId(), person.getEmail()));
         return "Person saved successfully..!="+person.getId();
     }
     @Override
