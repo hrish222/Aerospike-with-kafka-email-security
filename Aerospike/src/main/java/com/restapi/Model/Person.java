@@ -23,6 +23,8 @@ public class Person {
     @AerospikeBin
     private Categories categories;
 
+
+
     public Person(int id, String name, String email, int sal, String joiningDate, Categories categories) {
         this.id = id;
         this.name = name;

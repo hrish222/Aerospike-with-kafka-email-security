@@ -8,6 +8,7 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.*;
 //import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.micronaut.security.annotation.Secured;
 import io.micronaut.security.rules.SecurityRule;
@@ -24,6 +25,7 @@ import static org.apache.logging.log4j.LogManager.*;
 @Controller("/Person")
 
 @Tag(name = "Person Details")
+@SecurityRequirement(name="Authorization")
 @Secured({SecurityRule.IS_AUTHENTICATED})
 
 public class PersonController {
