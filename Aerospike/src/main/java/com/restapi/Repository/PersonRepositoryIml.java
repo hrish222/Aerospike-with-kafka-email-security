@@ -35,7 +35,8 @@ public class PersonRepositoryIml implements PersonRepository {
        mapper.getMapper().save(person);
          sendPersonNotification.sendPersonNotification("Person addded..!"+person);
         // sendEmailNotification.sendEmailNotification("dfhhadfhi"+person.getEmail(),"Person alerts!!");
-       EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info added "+person.getName()+", Your Person Id is "+person.getId(), person.getEmail()));
+
+        EmailService.sendEmail(new EmailDetails("Person Information Alert !!!", "Congratulations, Person Info added "+person.getName()+", Your Person Id is "+person.getId(), person.getEmail()));
         return "Person saved successfully..!="+person.getId();
     }
     @Override
