@@ -18,7 +18,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.List;
 
 
-@Controller("/Person")
+@Controller("/person")
 
 @Tag(name = "Person Details")
 @SecurityRequirement(name = "Authorization")
@@ -37,7 +37,7 @@ public class PersonController {
         return HttpResponse.ok(new CustomResponse(employeeService.addPerson(person)));
     }
 
-    @Get(value = "/GetallPerson")
+    @Get(value = "/getallperson")
     public HttpResponse<List<Person>> getAllPerson() {
         logger.info(getClass().getName() + " .HttpResponse<List<Person>> getAllPerson()");
         List<Person> person = employeeService.getAllPerson();
