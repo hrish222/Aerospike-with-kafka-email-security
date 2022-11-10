@@ -25,6 +25,7 @@
     <Loggers>
         <Logger name="com.restapi" level="info" additivity="false">
             <AppenderRef ref="file" />
+
             <AppenderRef ref="projectLog" />
         </Logger>
         <Root level="fatal">

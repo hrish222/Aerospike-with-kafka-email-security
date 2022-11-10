@@ -1,4 +1,5 @@
-p, ADMIN_ROLE, /Person/*, (GET)|(POST)|(PUT)|(DELETE)
-p, USER_ROLE, /Person/*, (GET)|(PUT)
+p, ADMIN_ROLE, /Person/*, (POST)|(PUT)|(DELETE)
+p, USER_ROLE, /Person/*, (GET)
 g, USER, USER_ROLE
 g, ADMIN, ADMIN_ROLE
+g, ADMIN_ROLE, USER_ROLE

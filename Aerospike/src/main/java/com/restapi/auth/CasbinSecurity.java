@@ -39,8 +39,6 @@ import reactor.core.publisher.Mono;
                 LOGGER.info("Casbin Authorization failed for path : " + request.getPath());
             return Mono.just(SecurityRuleResult.REJECTED);
         }
-
-
         public int getOrder() {return ORDER;}static {ORDER = SecuredAnnotationRule.ORDER - 100;
             LOGGER = LogManager.getLogger(CasbinSecurity.class);
         }
