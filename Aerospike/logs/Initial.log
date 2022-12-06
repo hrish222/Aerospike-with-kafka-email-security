@@ -2,3 +2,7 @@
 10:37:29 [main] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<List<Person>> getAllPerson()
 10:37:29 [main] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> addPerson(@Body Person person)
 10:37:29 [main] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> deleteById(int id)
+12:10:56 [main] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> updatePerson(@Body Person person ,@PathVariable(id) int id)
+12:10:56 [main] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<List<Person>> getAllPerson()
+12:10:56 [main] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> addPerson(@Body Person person)
+12:10:56 [main] INFO  com.restapi.Controller.PersonController - com.restapi.Controller.PersonController .HttpResponse<CustomResponse> deleteById(int id)

@@ -7,10 +7,18 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
 
+/**
+ * The type Email service.
+ */
 @Singleton
 public class EmailService {
 
 
+    /**
+     * Send email.
+     *
+     * @param emailDetails the email details
+     */
     public static void sendEmail(EmailDetails emailDetails) {
 
         Properties properties = System.getProperties();

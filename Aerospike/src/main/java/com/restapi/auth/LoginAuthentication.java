@@ -15,6 +15,9 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;
 
 
+/**
+ * The type Login authentication.
+ */
 @Singleton
 public class LoginAuthentication implements AuthenticationProvider {
 

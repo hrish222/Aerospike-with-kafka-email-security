@@ -49,3 +49,8 @@ kafka:
       value:
         serializer: org.apache.kafka.common.serialization.ByteArraySerializer
 
+tracing:
+  jaeger:
+    enabled: true
+    sampler:
+      probability: 1

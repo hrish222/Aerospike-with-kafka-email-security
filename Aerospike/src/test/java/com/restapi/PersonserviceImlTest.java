@@ -45,7 +45,7 @@ public class PersonserviceImlTest {
     public void addPerson() {
         //arrange
         Categories categories = new Categories(12);
-        Person person = new Person(12, "hrishi", "hrishikesh22@gmail.com", 2345, "2021-09-07", categories);
+        Person person = new Person(12, "hrishi", "hrishikesh22@gmail.com", 2345, "2021-09-07", categories,2345);
 
         when(employeeService.addPerson(person)).thenReturn("Person saved successfully..!=");
 
@@ -57,9 +57,9 @@ public class PersonserviceImlTest {
     @Test
     public void updatePerson() {
         Categories categories = new Categories(12);
-        Person person = new Person("hrishi", "hrishikesh22@gmail.com", 12345, "2020-04-22",categories);
+        Person person = new Person("hrishi", "hrishikesh22@gmail.com", 12345, "2020-04-22",categories,12345);
         person.setName("hrishi");
-        Person newEmp = new Person("hrash", "hrishikesh222@gmail.com", 23145, "2032-05-16",categories);
+        Person newEmp = new Person("hrash", "hrishikesh222@gmail.com", 23145, "2032-05-16",categories,565432);
 
         when(employeeService.updatePerson(person, 12)).thenReturn("Person Updated..!=");
 
@@ -71,7 +71,7 @@ public class PersonserviceImlTest {
     @Test
     public void deleteById() {
         Categories categories = new Categories(12);
-        Person person = new Person("hrishi", "hrishikesh22@gmail.com", 1234, "2019-04-10",categories);
+        Person person = new Person("hrishi", "hrishikesh22@gmail.com", 1234, "2019-04-10",categories,65432);
         person.setId(12);
 
         when(employeeService.deleteById(12)).thenReturn("Person Deleted By Id..!=");

@@ -1,5 +1,6 @@
 package com.restapi.auth;
 
+//import com.restapi.casbinutil.AerospikeDbEnforser;
 import com.restapi.casbinutil.CasbinEnforcerutil;
 import io.micronaut.http.HttpRequest;
 import io.micronaut.security.authentication.Authentication;
@@ -14,14 +15,28 @@ import org.apache.logging.log4j.Logger;
 import org.casbin.jcasbin.main.Enforcer;
 import org.reactivestreams.Publisher;
 import reactor.core.publisher.Mono;
-    @Singleton
+
+/**
+ * The type Casbin security.
+ */
+@Singleton
     public class CasbinSecurity extends AbstractSecurityRule {
-        public static final Integer ORDER;
+    /**
+     * The constant ORDER.
+     */
+    public static final Integer ORDER;
         private static final Logger LOGGER;
         private final Enforcer enforcer;
-        public CasbinSecurity(RolesFinder rolesFinder) {
+
+    /**
+     * Instantiates a new Casbin security.
+     *
+     * @param rolesFinder the roles finder
+     */
+    public CasbinSecurity(RolesFinder rolesFinder) {
             super(rolesFinder);
             this.enforcer = CasbinEnforcerutil.getCasbinEnForcer();
+
         }
 
         @Override
